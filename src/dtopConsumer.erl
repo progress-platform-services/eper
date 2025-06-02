@@ -118,7 +118,7 @@ resize(Items,Prcs) ->
 cpu_per_red(Sys) ->
   CPU =
     case lks(beam_user,Sys,1)+lks(beam_kernel,Sys,0) of
-      0.0 -> 1;
+      +0.0 -> 1;
       C -> C
     end,
   case lks(reductions,Sys) of

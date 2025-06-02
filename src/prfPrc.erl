@@ -117,7 +117,7 @@ out(P,NowDiff,Io,Ic,O={Odred,Omem,Odmem,Omsgq},Items) ->
     _:_ -> O
   end.
 
-new_topl(Top,{Item,_},_Items) when 0 =:= Item; 0.0 =:= Item ->
+new_topl(Top,{Item,_},_Items) when 0 =:= Item; +0.0 =:= Item ->
   Top;
 new_topl(Top,El,Items) when length(Top) < Items ->
   lists:sort([El|Top]);
